@@ -1,0 +1,176 @@
+<html>
+<head>
+    <title>Valueformoney</title>
+    <link rel="stylesheet" href="rohith.css">
+    <link rel="stylesheet" href="css/all.min.css">
+<body>
+<div class="parallax">
+    <div class="page-title"><b><font size="50" face="Ink free">Value for money</font></b></div>
+</div>
+<div class="menu" id="sticky">
+    <ul class="menu-ul">
+        <a href="#" class="a-menu"><li><i class="fas fa-home"></i></li></a>
+        <a href="#deals" class="a-menu"><li>Home</li></a>
+        <a href="vegetables.php" class="a-menu"><li>Deals</li></a>
+        <a href="Fruits.php" class="a-menu"><li>Mobiles</li></a>
+        <a href="meat_seafood.php" class="a-menu"><li>Laptop</li></a>
+        <a href="login.php" class="a-menu">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<li>Login<i class="fas fauser"></i></li></a></ul>
+
+</div><br><br><br><br>
+<center><div class="search-box">
+    <form>
+        <input type="search" placeholder="           Paste your product link" name="Search"
+               class="search-input" >
+        <button type="submit">
+            <i class="fas fa-search"></i>
+        </button>
+    </form>
+
+</div>
+    <button class="btn success">Search</button>
+
+
+</center><br><br>
+<i><font size="50">             Categories</font></i><br><br>
+<center><div class="row">
+    <div class="column">
+        <div class="card">
+            <img src="ipad.jpeg" alt="Phones" style="width:100%">
+            <p><button>Phones</button></p>
+        </div>
+    </div>
+    <div class="column">
+        <div class="card">
+            <img src="laptops.jpg" alt="laptop" style="width:100%">
+            <p><button>Laptop</button></p>
+        </div>
+    </div>
+    <div class="column">
+        <div class="card">
+            <img src="phone.jpeg" alt="laptop" style="width:100%">
+            <p><button>ipad</button></p>
+        </div>
+    </div>
+</div>
+</center><br><br><br>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+<body>
+<canvas id="myChart" style="width:100%;max-width:600px"></canvas><br><br><br>
+
+<script>
+    const xValues = [50,60,70,80,90,100,110,120,130,140,150];
+    const yValues = [7,8,8,9,9,9,10,11,14,14,15];
+
+    new Chart("myChart", {
+        type: "line",
+        data: {
+            labels: xValues,
+            datasets: [{
+                fill: false,
+                lineTension: 0,
+                backgroundColor: "rgba(0,0,255,1.0)",
+                borderColor: "rgba(0,0,255,0.1)",
+                data: yValues
+            }]
+        },
+        options: {
+            legend: {display: false},
+            scales: {
+                yAxes: [{ticks: {min: 6, max:16}}],
+            }
+        }
+    });
+</script>
+
+
+
+
+<!_footer starts_>
+<div class="parallax1">
+    <div class="footer">
+        <div class="quick-links">
+            <div>Support</div>
+            <ul>
+                <li><a href="" class="a-links">Terms & Conditions</a></li>
+                <li><a href="" class="a-links">Privacy policy</a></li>
+                <li><a href="" class="a-links">FAQ</a></li>
+            </ul>
+        </div>
+        <div class="quick-links">
+            <div>Social Media</div>
+            <ul>
+                <li><a href="" class="a-links">Whatsapp</a></li>
+                <li><a href="" class="a-links">Instagram</a></li>
+                <li><a href="" class="a-links">Telegram</a></li>
+            </ul>
+        </div>
+        <div class="quick-links">
+            <div>Quick Links</div>
+            <ul>
+                <li><a href="aboutus.html" class="a-links">About Us</a></li>
+                <li><a href="contactus.php" class="a-links">Contact Us</a></li>
+                <li><a href="" class="a-links">Help</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="copyrights">
+    <i class="far fa-copyright"></i>2021 by fassai
+</div>
+<! _footer ends_>
+<!_home page ends_>
+<script
+        src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<!-- Popper JS -->
+<script
+        src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"
+></script>
+<!-- Latest compiled JavaScript -->
+<script
+        src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></s
+cript>
+<script type="text/javascript">
+    $(document).ready(function(){
+    $(".addItemBtn").click(function(e){
+        e.preventDefault();
+        var $form = $(this).closest(".forum-submit");
+        var pid = $form.find(".pid").val();
+        var pname = $form.find(".pname").val();
+        var pprice = $form.find(".pprice").val();
+        var pimage = $form.find(".pimage").val();
+        var pcode = $form.find(".pcode").val();
+        var pqty = $form.find(".pqty").val();
+        $.ajax({
+            url: 'action.php',
+            method: 'post',
+            data: {
+                pid:pid,
+                pname:pname,
+                pprice:pprice,
+                pqty:pqty,
+                pimage:pimage,
+                pcode:pcode
+            },
+            success:function(response){
+                $("#message").html(response);
+                window.scrollTo(0,0);
+                load_cart_item_number();
+            }
+        });
+    });
+    load_cart_item_number();
+    function load_cart_item_number(){
+    $.ajax({
+    url: 'action.php',
+    method: 'get',
+    data: {cartItem:"cart_item"},
+    success:function(response){
+    $("#cart-item").html(response);
+}
+});
+}
+});
+</script>
+</body>
+</head>
