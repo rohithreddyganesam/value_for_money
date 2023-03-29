@@ -1,0 +1,268 @@
+body{
+    margin: 0;
+    font-style: system-ui;
+}
+.parallax, .parallax1{
+    background-image: url('backgrounnd.png');
+    height: max-content;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.logo{
+    width: 200px;
+    height: 200px;
+}
+.page-title{
+    background: rgba(11, 11, 11, 0.966);
+    text-align: center;
+    padding: 50px;
+    color:white;
+}
+.sticky{
+    position: 0;
+    top: 0;
+    width: 100%;
+}
+.menu{
+    background: #fa6400;
+    text-align: center;
+}
+.menu-ul{
+    margin:0;
+    padding: 0;
+    display: inline;
+}
+.menu-ul li{
+    font-size: 17px;
+    list-style: none;
+    display: inline-block;
+    padding: 25px 25px 26px 25px;
+}
+.a-menu, .a-links {
+    text-decoration: none;
+    color: rgb(1, 1, 1);
+
+}
+.menu-ul li:hover{
+    transform: scale(1.0);
+    background-color:#5b8c5a;
+}
+.search-box{
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 50px;
+    background: white;
+    width: max-content;
+    display: inline-block;
+    margin: 8px;
+}
+.btn{
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 50px;
+    background-color: Black;
+    padding: 14px 28px;
+    font-size: 16px;
+    cursor: pointer;
+    display: inline-block;
+}
+.btn:hover {background: #eee;}
+.success {color: rgb(218, 233, 17);
+}
+.search-box:hover{
+    box-shadow: 0 0 10px 2px #5b8c5a;
+    border: 1px solid #5b8c5a;
+}
+.search-input{
+    width: 250px;
+    border: none;
+    font-size: 16px;
+    outline:none;
+    background: transparent;
+    margin: 15px 0 0 10px;
+}
+*{
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Float four columns side by side */
+.column {
+    float: left;
+    width: 25%;
+    padding: 0 10px;
+}
+
+/* Remove extra left and right margins, due to padding in columns */
+.row {margin: 0 -5px;}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Style the counter cards */
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect */
+    padding: 16px;
+    text-align: center;
+    background-color: #f1f1f1;
+}
+
+/* Responsive columns - one column layout (vertical) on small screens */
+@media screen and (max-width: 600px) {
+    .column {
+        width: 100%;
+        display: block;
+        margin-bottom: 20px;
+    }
+}
+.card button {
+    border: none;
+    outline: 0;
+    padding: 12px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+}
+
+.card button:hover {
+    opacity: 0.7;
+}
+
+i{
+    font-size: 20px;
+    margin: 0 10px;
+}
+button{
+    background:transparent;
+    border:none;
+    outline: none;
+}
+.containers, .deals-container{
+    margin: 50px 50px 50px 5px;
+    width: 90%;
+    text-align: center;
+}
+.categories, .items{
+    width: max-content;
+    margin: 25px;
+    border: 1px solid #184d47;
+    border-radius: 0 0 50px 50px;
+    display: inline-block;
+}
+.categories, .items:hover{
+    box-shadow: 0 0 10px 3px #184d47;
+}
+.item-image{
+    height: 200px;
+    width: 200px;
+    border-radius: 0 0 50px 50px;
+    padding: 10px;
+}
+.image-title{
+    text-align: center;
+    padding: 10px;
+    font-weight: bold;
+}
+a{
+    text-decoration: none;
+}
+.title{
+    margin: 10px 0 0 0;
+    padding: 50px;
+    text-align: center;
+    font-size: 50px;
+    font-weight: bold;
+    letter-spacing: 10px;
+    color: white;
+    background: rgba(0,0,0,0.5);
+}
+.deal{
+    padding: 50px;
+    font-size: 20px;
+    font-weight: bold;
+    color: black;
+    display: inline-block;
+    margin: 20px 0 0 70px;
+    max-width: 20%;
+    background: linear-gradient(120deg,#06e6ff 20%,#06ff2f 50%,#16817a 80%);
+}
+.coupon-btn{
+    border: solid black;
+    color: black;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 20px;
+}
+.coupon-btn:hover{
+    box-shadow: 0 0 10px 5px #5b8c5a inset;
+}
+.images{
+    display: inline-block;
+}
+.item-image-size{
+    height: 200px;
+    width: 300px;
+    padding: 5px;
+}
+.description{
+    margin: 20px;
+    min-height: 100px;
+}
+.item-select{
+    margin: 10px 0 0 0;
+}
+.buynow-btn{
+    border: 1px solid #184d47;
+    background: #184d47;
+    padding: 5px 15px;
+    border-radius: 20px;
+    margin-top: 10px;
+    color: white;
+}
+.buynow-btn:hover{
+    border: 1px solid #5b8c5a;
+    box-shadow: 0 0 10px 5px #5b8c5a inset;
+}
+.parallax1{
+    background-image: url("footerbackground.jpg");
+}
+.footer{
+    background: rgba(0,0,0,0.3);
+    text-align: center;
+    padding: 20px;
+
+}
+.quick-links{
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    display: inline-block;
+    min-width: 30%;
+}
+.quick-links ul{
+    padding: 0;
+}
+.quick-links li{
+    list-style: none;
+    padding: 10px;
+    font-weight: 300;
+}
+.a-links:hover{
+    color: #fd5e53;
+}
+.copyrights{
+    font-size: 16px;
+    font-family:sans-serif;
+    text-align: center;
+    margin: 15px;
+}
